@@ -1,0 +1,1958 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HUDLI | Premium Optical Store</title>
+
+<meta name="description"
+content="HUDLI Optical Store - Premium spectacles, sunglasses and eyewear.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --dark:#111827;
+    --dark2:#1f2937;
+    --gold:#c9a227;
+    --gold2:#e7c65a;
+    --cream:#faf8f2;
+    --white:#ffffff;
+    --gray:#6b7280;
+    --light:#f3f4f6;
+    --green:#16a34a;
+    --red:#dc2626;
+    --shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--cream);
+    color:#172033;
+}
+
+/* HEADER */
+
+header{
+    background:rgba(17,24,39,.97);
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 20px rgba(0,0,0,.15);
+}
+
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    min-height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 20px;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:900;
+    letter-spacing:5px;
+    color:white;
+}
+
+.logo span{
+    color:var(--gold2);
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    cursor:pointer;
+}
+
+nav a:hover{
+    color:var(--gold2);
+}
+
+.cart-button{
+    border:1px solid var(--gold);
+    background:transparent;
+    color:white;
+    padding:10px 16px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.cart-button span{
+    background:var(--gold);
+    color:#111;
+    padding:3px 7px;
+    border-radius:50%;
+    margin-left:5px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(90deg,rgba(17,24,39,.94),rgba(17,24,39,.60)),
+    url("https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+    color:white;
+}
+
+.hero-content{
+    max-width:1250px;
+    width:100%;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,78px);
+    line-height:1;
+    letter-spacing:3px;
+}
+
+.hero h1 span{
+    color:var(--gold2);
+}
+
+.hero p{
+    margin:25px 0;
+    max-width:600px;
+    font-size:18px;
+    line-height:1.7;
+    color:#e5e7eb;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:700;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-gold{
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    color:#111;
+}
+
+.btn-dark{
+    background:var(--dark);
+    color:white;
+}
+
+/* SECTIONS */
+
+section{
+    padding:70px 20px;
+}
+
+.container{
+    max-width:1250px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:36px;
+}
+
+.section-title p{
+    color:var(--gray);
+    margin-top:10px;
+}
+
+/* SEARCH */
+
+.shop-tools{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.search{
+    flex:1;
+    min-width:220px;
+    padding:15px 18px;
+    border:1px solid #ddd;
+    border-radius:30px;
+    outline:none;
+}
+
+select{
+    padding:15px 18px;
+    border:1px solid #ddd;
+    border-radius:30px;
+    background:white;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.product{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-6px);
+}
+
+.product-img{
+    height:230px;
+    background:#f5f5f5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.product-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.badge{
+    display:inline-block;
+    background:#fef3c7;
+    color:#92400e;
+    padding:5px 9px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.product h3{
+    margin:12px 0 5px;
+}
+
+.product p{
+    color:var(--gray);
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:21px;
+    font-weight:800;
+    margin:12px 0;
+}
+
+.product-actions{
+    display:flex;
+    gap:8px;
+}
+
+.product-actions button{
+    flex:1;
+}
+
+/* ABOUT */
+
+.about{
+    background:var(--dark);
+    color:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about p{
+    color:#d1d5db;
+    line-height:1.8;
+    margin-top:20px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.feature{
+    padding:25px;
+    background:#1f2937;
+    border-radius:18px;
+}
+
+.feature strong{
+    display:block;
+    color:var(--gold2);
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+/* CART */
+
+.overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    z-index:1999;
+}
+
+.overlay.show{
+    display:block;
+}
+
+.cart-panel{
+    position:fixed;
+    right:-500px;
+    top:0;
+    width:min(450px,100%);
+    height:100%;
+    background:white;
+    z-index:2000;
+    padding:25px;
+    overflow:auto;
+    transition:.35s;
+}
+
+.cart-panel.show{
+    right:0;
+}
+
+.cart-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.close{
+    border:none;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.cart-item{
+    display:flex;
+    gap:12px;
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+}
+
+.cart-item img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.qty{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:7px;
+}
+
+.qty button{
+    width:27px;
+    height:27px;
+    border:1px solid #ddd;
+    background:white;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.cart-total{
+    margin-top:25px;
+    padding-top:20px;
+    border-top:2px solid #ddd;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* CHECKOUT */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    background:rgba(0,0,0,.65);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    background:white;
+    width:min(700px,100%);
+    max-height:90vh;
+    overflow:auto;
+    border-radius:20px;
+    padding:30px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+label{
+    display:block;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+input,textarea{
+    width:100%;
+    padding:13px 14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+}
+
+textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+/* ADMIN */
+
+.admin{
+    background:#f1f5f9;
+}
+
+.admin-login{
+    max-width:450px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.admin-dashboard{
+    display:none;
+}
+
+.admin-dashboard.show{
+    display:block;
+}
+
+.admin-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.stat{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:var(--shadow);
+}
+
+.stat strong{
+    font-size:30px;
+}
+
+.order-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+}
+
+.order-table th,
+.order-table td{
+    padding:14px;
+    border-bottom:1px solid #eee;
+    text-align:left;
+}
+
+.status{
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    display:inline-block;
+}
+
+.status.Pending{
+    background:#fef3c7;
+    color:#92400e;
+}
+
+.status.Confirmed{
+    background:#dbeafe;
+    color:#1d4ed8;
+}
+
+.status.Packed{
+    background:#ede9fe;
+    color:#6d28d9;
+}
+
+.status.Shipped{
+    background:#cffafe;
+    color:#155e75;
+}
+
+.status.Delivered{
+    background:#dcfce7;
+    color:#166534;
+}
+
+.status.Cancelled{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+/* ADD PRODUCT */
+
+.add-product{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+.preview{
+    width:100%;
+    height:180px;
+    object-fit:contain;
+    background:#f3f4f6;
+    border-radius:12px;
+    margin-top:10px;
+    display:none;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b1120;
+    color:#cbd5e1;
+    padding:50px 20px;
+    text-align:center;
+}
+
+footer .brand{
+    font-size:30px;
+    color:white;
+    letter-spacing:5px;
+    font-weight:bold;
+}
+
+footer p{
+    margin-top:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+    nav{
+        display:none;
+    }
+
+    .navbar{
+        padding:12px 15px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+    .order-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    section{
+        padding:55px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<div class="navbar">
+
+<div class="logo">
+HUDLI<span>.</span>
+</div>
+
+<nav>
+<a onclick="scrollToSection('home')">Home</a>
+<a onclick="scrollToSection('shop')">Shop</a>
+<a onclick="scrollToSection('about')">About</a>
+<a onclick="scrollToSection('admin')">Orders</a>
+</nav>
+
+<button class="cart-button" onclick="openCart()">
+🛒 Cart <span id="cartCount">0</span>
+</button>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>SEE LIFE<br><span>BEAUTIFULLY.</span></h1>
+
+<p>
+Discover premium spectacles, sunglasses and optical frames
+carefully selected for comfort, clarity and timeless style.
+</p>
+
+<a class="btn btn-gold" onclick="scrollToSection('shop')">
+SHOP EYEWEAR
+</a>
+
+</div>
+
+</section>
+
+
+<!-- SHOP -->
+
+<section id="shop">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Eyewear Collection</h2>
+<p>Premium frames for every face and every style.</p>
+</div>
+
+<div class="shop-tools">
+
+<input
+class="search"
+id="searchBox"
+placeholder="Search spectacles..."
+oninput="renderProducts()"
+>
+
+<select id="categoryFilter" onchange="renderProducts()">
+<option value="all">All Categories</option>
+<option value="Eyeglasses">Eyeglasses</option>
+<option value="Sunglasses">Sunglasses</option>
+<option value="Computer Glasses">Computer Glasses</option>
+<option value="Kids">Kids</option>
+</select>
+
+</div>
+
+<div class="products" id="productGrid"></div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div>
+
+<h2>HUDLI OPTICAL</h2>
+
+<p>
+At HUDLI, we believe eyewear should be more than just a necessity.
+It should reflect your personality while providing excellent
+comfort and vision.
+</p>
+
+<p>
+Explore our collection of modern frames, sunglasses and
+computer glasses.
+</p>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+<strong>01</strong>
+Quality Frames
+</div>
+
+<div class="feature">
+<strong>02</strong>
+Modern Designs
+</div>
+
+<div class="feature">
+<strong>03</strong>
+Easy Ordering
+</div>
+
+<div class="feature">
+<strong>04</strong>
+Customer Support
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ADMIN / ORDER MANAGEMENT -->
+
+<section class="admin" id="admin">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Order Management</h2>
+<p>Manage products and customer orders.</p>
+</div>
+
+<div id="loginBox" class="admin-login">
+
+<h3>Admin Login</h3>
+
+<br>
+
+<div class="form-group">
+<label>Admin Password</label>
+<input type="password" id="adminPassword"
+placeholder="Enter password">
+</div>
+
+<button class="btn btn-dark" onclick="adminLogin()">
+Login
+</button>
+
+<p style="margin-top:12px;color:#777;font-size:13px;">
+Demo password: <b>hudli123</b>
+</p>
+
+</div>
+
+
+<div class="admin-dashboard" id="adminDashboard">
+
+
+<!-- ADD PRODUCT -->
+
+<div class="add-product">
+
+<h3>Add New Spectacle</h3>
+
+<br>
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label>Product Name</label>
+
+<input
+id="newName"
+placeholder="Example: HUDLI Classic Black"
+>
+
+</div>
+
+<div class="form-group">
+
+<label>Price (₹)</label>
+
+<input
+type="number"
+id="newPrice"
+placeholder="1499"
+>
+
+</div>
+
+<div class="form-group">
+
+<label>Category</label>
+
+<select id="newCategory">
+
+<option>Eyeglasses</option>
+<option>Sunglasses</option>
+<option>Computer Glasses</option>
+<option>Kids</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Product URL</label>
+
+<input
+id="newUrl"
+placeholder="https://yourwebsite.com/product"
+>
+
+</div>
+
+<div class="form-group full">
+
+<label>Photo URL</label>
+
+<input
+id="newImage"
+placeholder="https://example.com/spectacle.jpg"
+oninput="previewProductImage()"
+>
+
+<img id="imagePreview" class="preview">
+
+</div>
+
+<div class="form-group full">
+
+<label>Description</label>
+
+<textarea
+id="newDescription"
+placeholder="Describe the spectacle..."
+></textarea>
+
+</div>
+
+</div>
+
+<button class="btn btn-gold"
+onclick="addProduct()">
++ Add Product
+</button>
+
+</div>
+
+
+<!-- STATISTICS -->
+
+<div class="admin-stats">
+
+<div class="stat">
+<small>Total Orders</small>
+<br>
+<strong id="totalOrders">0</strong>
+</div>
+
+<div class="stat">
+<small>Pending</small>
+<br>
+<strong id="pendingOrders">0</strong>
+</div>
+
+<div class="stat">
+<small>Delivered</small>
+<br>
+<strong id="deliveredOrders">0</strong>
+</div>
+
+<div class="stat">
+<small>Total Sales</small>
+<br>
+<strong id="totalSales">₹0</strong>
+</div>
+
+</div>
+
+
+<!-- ORDERS -->
+
+<h3>Customer Orders</h3>
+
+<br>
+
+<div style="overflow:auto">
+
+<table class="order-table">
+
+<thead>
+
+<tr>
+
+<th>Order ID</th>
+<th>Customer</th>
+<th>Phone</th>
+<th>Products</th>
+<th>Total</th>
+<th>Status</th>
+<th>Update</th>
+
+</tr>
+
+</thead>
+
+<tbody id="ordersTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="brand">HUDLI</div>
+
+<p>Premium Optical Store</p>
+
+<p>
+© 2026 HUDLI. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- CART -->
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<div class="cart-panel" id="cartPanel">
+
+<div class="cart-head">
+
+<h2>Your Cart</h2>
+
+<button class="close" onclick="closeCart()">
+×
+</button>
+
+</div>
+
+<div id="cartItems"></div>
+
+<div class="cart-total">
+
+Total:
+<span id="cartTotal">₹0</span>
+
+</div>
+
+<br>
+
+<button class="btn btn-gold"
+style="width:100%"
+onclick="openCheckout()">
+
+Proceed to Checkout
+
+</button>
+
+</div>
+
+
+<!-- CHECKOUT MODAL -->
+
+<div class="modal" id="checkoutModal">
+
+<div class="modal-box">
+
+<div class="cart-head">
+
+<h2>Checkout</h2>
+
+<button class="close"
+onclick="closeCheckout()">×</button>
+
+</div>
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label>Full Name *</label>
+
+<input id="customerName"
+placeholder="Your name">
+
+</div>
+
+<div class="form-group">
+
+<label>Mobile Number *</label>
+
+<input id="customerPhone"
+placeholder="+91">
+
+</div>
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input id="customerEmail"
+type="email"
+placeholder="you@example.com">
+
+</div>
+
+<div class="form-group">
+
+<label>City</label>
+
+<input id="customerCity"
+placeholder="City">
+
+</div>
+
+<div class="form-group full">
+
+<label>Delivery Address *</label>
+
+<textarea
+id="customerAddress"
+placeholder="Full delivery address">
+</textarea>
+
+</div>
+
+<div class="form-group full">
+
+<label>Order Notes</label>
+
+<textarea
+id="customerNotes"
+placeholder="Prescription details, preferred frame colour, etc.">
+</textarea>
+
+</div>
+
+</div>
+
+<div style="padding:20px 0">
+
+<h3>
+Order Total:
+<span id="checkoutTotal">₹0</span>
+</h3>
+
+</div>
+
+<button class="btn btn-gold"
+style="width:100%"
+onclick="placeOrder()">
+
+PLACE ORDER
+
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   PRODUCT DATABASE
+========================= */
+
+let products = JSON.parse(
+localStorage.getItem("hudli_products")
+) || [
+
+{
+id:1,
+name:"HUDLI Classic Black",
+price:1499,
+category:"Eyeglasses",
+image:"https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=800&q=80",
+url:"#",
+description:"Classic black optical frame with a modern lightweight design."
+},
+
+{
+id:2,
+name:"HUDLI Premium Gold",
+price:1899,
+category:"Eyeglasses",
+image:"https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=800&q=80",
+url:"#",
+description:"Elegant gold-tone frame designed for a premium appearance."
+},
+
+{
+id:3,
+name:"HUDLI Urban Shades",
+price:2299,
+category:"Sunglasses",
+image:"https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80",
+url:"#",
+description:"Stylish sunglasses suitable for everyday outdoor use."
+},
+
+{
+id:4,
+name:"HUDLI Computer Pro",
+price:1299,
+category:"Computer Glasses",
+image:"https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80",
+url:"#",
+description:"Comfortable computer glasses for long screen sessions."
+}
+
+];
+
+
+/* =========================
+   CART
+========================= */
+
+let cart =
+JSON.parse(localStorage.getItem("hudli_cart"))
+|| [];
+
+
+/* =========================
+   ORDERS
+========================= */
+
+let orders =
+JSON.parse(localStorage.getItem("hudli_orders"))
+|| [];
+
+
+/* =========================
+   SAVE
+========================= */
+
+function saveData(){
+
+localStorage.setItem(
+"hudli_products",
+JSON.stringify(products)
+);
+
+localStorage.setItem(
+"hudli_cart",
+JSON.stringify(cart)
+);
+
+localStorage.setItem(
+"hudli_orders",
+JSON.stringify(orders)
+);
+
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+function renderProducts(){
+
+const grid =
+document.getElementById("productGrid");
+
+const search =
+document.getElementById("searchBox")
+.value.toLowerCase();
+
+const category =
+document.getElementById("categoryFilter")
+.value;
+
+grid.innerHTML="";
+
+const filtered =
+products.filter(p=>{
+
+return (
+
+p.name.toLowerCase()
+.includes(search)
+
+&&
+
+(category==="all" || p.category===category)
+
+);
+
+});
+
+
+filtered.forEach(p=>{
+
+const div =
+document.createElement("div");
+
+div.className="product";
+
+div.innerHTML=`
+
+<div class="product-img">
+
+<img
+src="${p.image}"
+alt="${p.name}"
+onerror="this.src='https://via.placeholder.com/600x400?text=HUDLI+OPTICAL'"
+>
+
+</div>
+
+<div class="product-info">
+
+<span class="badge">
+${p.category}
+</span>
+
+<h3>${p.name}</h3>
+
+<p>${p.description}</p>
+
+<div class="price">
+₹${p.price.toLocaleString("en-IN")}
+</div>
+
+<div class="product-actions">
+
+<button
+class="btn btn-dark"
+onclick="addToCart(${p.id})">
+Add to Cart
+</button>
+
+<a
+class="btn btn-gold"
+href="${p.url}"
+target="_blank">
+View
+</a>
+
+</div>
+
+</div>
+
+`;
+
+grid.appendChild(div);
+
+});
+
+}
+
+
+/* =========================
+   ADD TO CART
+========================= */
+
+function addToCart(id){
+
+const existing =
+cart.find(i=>i.id===id);
+
+if(existing){
+
+existing.qty++;
+
+}else{
+
+cart.push({
+id:id,
+qty:1
+});
+
+}
+
+saveData();
+renderCart();
+
+openCart();
+
+}
+
+
+/* =========================
+   CART
+========================= */
+
+function renderCart(){
+
+const box =
+document.getElementById("cartItems");
+
+box.innerHTML="";
+
+let total=0;
+let count=0;
+
+cart.forEach(item=>{
+
+const p =
+products.find(x=>x.id===item.id);
+
+if(!p) return;
+
+total += p.price * item.qty;
+
+count += item.qty;
+
+const div =
+document.createElement("div");
+
+div.className="cart-item";
+
+div.innerHTML=`
+
+<img src="${p.image}">
+
+<div style="flex:1">
+
+<strong>${p.name}</strong>
+
+<div>
+₹${p.price.toLocaleString("en-IN")}
+</div>
+
+<div class="qty">
+
+<button
+onclick="changeQty(${p.id},-1)">
+−
+</button>
+
+<span>${item.qty}</span>
+
+<button
+onclick="changeQty(${p.id},1)">
++
+</button>
+
+<button
+onclick="removeCart(${p.id})"
+style="margin-left:auto;color:red;border:none;background:none;">
+Remove
+</button>
+
+</div>
+
+</div>
+
+`;
+
+box.appendChild(div);
+
+});
+
+
+document.getElementById("cartCount")
+.innerText=count;
+
+document.getElementById("cartTotal")
+.innerText="₹"+total.toLocaleString("en-IN");
+
+document.getElementById("checkoutTotal")
+.innerText="₹"+total.toLocaleString("en-IN");
+
+}
+
+
+/* =========================
+   CHANGE QUANTITY
+========================= */
+
+function changeQty(id,change){
+
+const item =
+cart.find(i=>i.id===id);
+
+if(!item) return;
+
+item.qty += change;
+
+if(item.qty<=0){
+
+cart =
+cart.filter(i=>i.id!==id);
+
+}
+
+saveData();
+renderCart();
+
+}
+
+
+/* =========================
+   REMOVE
+========================= */
+
+function removeCart(id){
+
+cart =
+cart.filter(i=>i.id!==id);
+
+saveData();
+renderCart();
+
+}
+
+
+/* =========================
+   CART PANEL
+========================= */
+
+function openCart(){
+
+document.getElementById("cartPanel")
+.classList.add("show");
+
+document.getElementById("overlay")
+.classList.add("show");
+
+}
+
+function closeCart(){
+
+document.getElementById("cartPanel")
+.classList.remove("show");
+
+document.getElementById("overlay")
+.classList.remove("show");
+
+}
+
+
+/* =========================
+   CHECKOUT
+========================= */
+
+function openCheckout(){
+
+if(cart.length===0){
+
+alert("Your cart is empty.");
+
+return;
+
+}
+
+closeCart();
+
+document.getElementById("checkoutModal")
+.classList.add("show");
+
+}
+
+function closeCheckout(){
+
+document.getElementById("checkoutModal")
+.classList.remove("show");
+
+}
+
+
+/* =========================
+   PLACE ORDER
+========================= */
+
+function placeOrder(){
+
+const name =
+document.getElementById("customerName").value.trim();
+
+const phone =
+document.getElementById("customerPhone").value.trim();
+
+const address =
+document.getElementById("customerAddress").value.trim();
+
+if(!name || !phone || !address){
+
+alert("Please fill all required fields.");
+
+return;
+
+}
+
+
+let total=0;
+
+const orderedProducts =
+cart.map(item=>{
+
+const p =
+products.find(x=>x.id===item.id);
+
+total += p.price * item.qty;
+
+return {
+
+name:p.name,
+qty:item.qty,
+price:p.price
+
+};
+
+});
+
+
+const order={
+
+id:"HUD-"+Date.now()
+.toString()
+.slice(-7),
+
+date:new Date()
+.toLocaleString(),
+
+customer:{
+name:name,
+phone:phone,
+email:
+document.getElementById("customerEmail").value,
+city:
+document.getElementById("customerCity").value,
+address:address,
+notes:
+document.getElementById("customerNotes").value
+},
+
+products:orderedProducts,
+
+total:total,
+
+status:"Pending"
+
+};
+
+
+orders.unshift(order);
+
+cart=[];
+
+saveData();
+
+renderCart();
+
+closeCheckout();
+
+alert(
+"Order placed successfully!\n\nOrder ID: "
++order.id
+);
+
+renderAdmin();
+
+}
+
+
+/* =========================
+   ADMIN LOGIN
+========================= */
+
+function adminLogin(){
+
+const password =
+document.getElementById("adminPassword")
+.value;
+
+if(password==="hudli123"){
+
+document.getElementById("loginBox")
+.style.display="none";
+
+document.getElementById("adminDashboard")
+.classList.add("show");
+
+renderAdmin();
+
+}else{
+
+alert("Incorrect admin password.");
+
+}
+
+}
+
+
+/* =========================
+   ADMIN DASHBOARD
+========================= */
+
+function renderAdmin(){
+
+const table =
+document.getElementById("ordersTable");
+
+if(!table) return;
+
+table.innerHTML="";
+
+let sales=0;
+let pending=0;
+let delivered=0;
+
+
+orders.forEach(order=>{
+
+sales += order.total;
+
+if(order.status==="Pending")
+pending++;
+
+if(order.status==="Delivered")
+delivered++;
+
+
+const productText =
+order.products
+.map(p=>`${p.name} × ${p.qty}`)
+.join(", ");
+
+
+const row =
+document.createElement("tr");
+
+row.innerHTML=`
+
+<td>
+<strong>${order.id}</strong>
+<br>
+<small>${order.date}</small>
+</td>
+
+<td>
+${order.customer.name}
+<br>
+<small>${order.customer.address}</small>
+</td>
+
+<td>
+${order.customer.phone}
+</td>
+
+<td>
+${productText}
+</td>
+
+<td>
+₹${order.total.toLocaleString("en-IN")}
+</td>
+
+<td>
+<span class="status ${order.status}">
+${order.status}
+</span>
+</td>
+
+<td>
+
+<select
+onchange="updateOrderStatus('${order.id}',this.value)">
+
+<option
+${order.status==="Pending"?"selected":""}>
+Pending
+</option>
+
+<option
+${order.status==="Confirmed"?"selected":""}>
+Confirmed
+</option>
+
+<option
+${order.status==="Packed"?"selected":""}>
+Packed
+</option>
+
+<option
+${order.status==="Shipped"?"selected":""}>
+Shipped
+</option>
+
+<option
+${order.status==="Delivered"?"selected":""}>
+Delivered
+</option>
+
+<option
+${order.status==="Cancelled"?"selected":""}>
+Cancelled
+</option>
+
+</select>
+
+</td>
+
+`;
+
+table.appendChild(row);
+
+});
+
+
+document.getElementById("totalOrders")
+.innerText=orders.length;
+
+document.getElementById("pendingOrders")
+.innerText=pending;
+
+document.getElementById("deliveredOrders")
+.innerText=delivered;
+
+document.getElementById("totalSales")
+.innerText=
+"₹"+sales.toLocaleString("en-IN");
+
+}
+
+
+/* =========================
+   UPDATE ORDER STATUS
+========================= */
+
+function updateOrderStatus(id,status){
+
+const order =
+orders.find(o=>o.id===id);
+
+if(order){
+
+order.status=status;
+
+saveData();
+
+renderAdmin();
+
+}
+
+}
+
+
+/* =========================
+   ADD PRODUCT
+========================= */
+
+function addProduct(){
+
+const name =
+document.getElementById("newName").value.trim();
+
+const price =
+Number(document.getElementById("newPrice").value);
+
+const category =
+document.getElementById("newCategory").value;
+
+const image =
+document.getElementById("newImage").value.trim();
+
+const url =
+document.getElementById("newUrl").value.trim();
+
+const description =
+document.getElementById("newDescription")
+.value.trim();
+
+
+if(!name || !price || !image){
+
+alert("Product name, price and photo URL are required.");
+
+return;
+
+}
+
+
+products.push({
+
+id:Date.now(),
+
+name:name,
+
+price:price,
+
+category:category,
+
+image:image,
+
+url:url || "#",
+
+description:
+description ||
+"Premium HUDLI optical eyewear."
+
+});
+
+
+saveData();
+
+renderProducts();
+
+alert("Product added successfully.");
+
+
+/* clear */
+
+document.getElementById("newName").value="";
+document.getElementById("newPrice").value="";
+document.getElementById("newImage").value="";
+document.getElementById("newUrl").value="";
+document.getElementById("newDescription").value="";
+
+document.getElementById("imagePreview")
+.style.display="none";
+
+}
+
+
+/* =========================
+   IMAGE PREVIEW
+========================= */
+
+function previewProductImage(){
+
+const url =
+document.getElementById("newImage")
+.value.trim();
+
+const preview =
+document.getElementById("imagePreview");
+
+if(url){
+
+preview.src=url;
+preview.style.display="block";
+
+}else{
+
+preview.style.display="none";
+
+}
+
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+function scrollToSection(id){
+
+document.getElementById(id)
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =========================
+   INITIALIZE
+========================= */
+
+renderProducts();
+
+renderCart();
+
+</script>
+
+</body>
+</html>
+```
